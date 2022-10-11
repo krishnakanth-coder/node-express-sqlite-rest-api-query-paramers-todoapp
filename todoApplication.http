@@ -1,0 +1,47 @@
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+GET http://localhost:3000/todos/?search_q=Play
+###2
+GET http://localhost:3000/todos/1
+###3
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+    "todo":"MY Movie10 GAME ",
+    "priority": "LOW",
+    "status": "TO DO"
+}
+###4
+PUT http://localhost:3000/todos/1
+Content-Type: application/json
+
+{
+    //"priority": "HIGH"
+   // "status": "IN PROGRESS"
+   "todo":"Watch Movie nice3 "
+}
+###
+PUT http://localhost:3000/todos/2
+Content-Type: application/json
+
+{
+    "priority": "HIGH"
+   // "status": "IN PROGRESS"
+   //"todo":"Watch Movie nice3 "
+}
+
+###
+PUT http://localhost:3000/todos/3
+Content-Type: application/json
+
+{
+    //"priority": "HIGH"
+   "status": "IN PROGRESS"
+   //"todo":"Watch Movie nice3 "
+}
+###5"status": "IN PROGRESS""todo":"Watch Movie nice3 ",
+    
+DELETE http://localhost:3000/todos/14
